@@ -24,9 +24,14 @@ let displayValue = "";
 let displayBox = document.querySelector(".display");
 displayBox.innerHTML = displayValue;
 
-
-
 const buttons = document.querySelectorAll(".btn")
 buttons.forEach(button => button.addEventListener('click', function() {
     displayValue += button.innerHTML;
-    displayBox.innerHTML = displayValue} ) )
+    displayBox.innerHTML = displayValue
+    console.log(displayValue)} ) )
+
+const clear = document.querySelectorAll(".clear")
+clear.forEach(button => button.addEventListener('click', function() {
+    displayValue = "";
+    displayBox.innerHTML = displayValue} ) )  
+
