@@ -11,6 +11,11 @@ body {
 }
 
 .display {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 70px;
     height: 10vw;
     width: 40vw;
     margin: 5vw;

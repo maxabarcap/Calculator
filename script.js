@@ -20,3 +20,13 @@ const operate = function(operator,a,b) {
     else if (operator == "/") 
         {return divide(a,b)}    }
 
+let displayValue = "";
+let displayBox = document.querySelector(".display");
+displayBox.innerHTML = displayValue;
+
+
+
+const buttons = document.querySelectorAll(".btn")
+buttons.forEach(button => button.addEventListener('click', function() {
+    displayValue += button.innerHTML;
+    displayBox.innerHTML = displayValue} ) )
