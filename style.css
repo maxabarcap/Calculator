@@ -1,0 +1,50 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.display {
+    height: 10vw;
+    width: 40vw;
+    margin: 5vw;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+}
+
+#one { grid-area: one;}
+#two { grid-area: two;}
+#three { grid-area: three;}
+#four { grid-area: four;}
+#five {grid-area: five;}
+#six { grid-area: six;}
+#seven { grid-area: seven;}
+#eight { grid-area: eight;}
+#nine { grid-area: nine;}
+#zero { grid-area: zero;}
+#add { grid-area: add;}
+#substract { grid-area: sub;}
+#multiply { grid-area: mult;}
+#divide { grid-area: div;}
+#equal { grid-area: equal;}
+#clear { grid-area: clear;}
+
+.container {
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw 10vw;
+    grid-template-rows: 10vw 10vw 10vw 10vw;
+    grid-template-areas: 
+        "one two three add"
+        "four five six sub"
+        "seven eight nine mult"
+        "clear zero equal div";
+}
