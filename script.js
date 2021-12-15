@@ -1,17 +1,17 @@
 const add = function(a,b) {
-    return parseInt(a)+parseInt(b);}
+    return Math.round((parseFloat(a)+parseFloat(b))*1000000000)/1000000000;}
 
 const substract = function (a,b) {
-    return a-b;}
+    return Math.round((a-b)*1000000000)/1000000000;}
 
 const multiply = function(a,b) {
-    return a*b;}
+    return Math.round(a*b*1000000000)/1000000000;}
 
 const divide = function(a,b) {
     if (b==0) {
         return "nice try"}
     else {
-        return a/b;}}
+        return Math.round(a/b*1000000000)/1000000000;}}
 
 const operate = function(operator,a,b) {
     if (operator == "+") {
