@@ -69,10 +69,17 @@ operator.forEach(button => button.addEventListener('click', function() {
 
     }
     else {
-        calculate()
-        savedOperand = button.innerHTML
-        operandOne = lastResult
-        isLastKeyOp = true
+        if (isLastKeyEq == false) {
+            calculate()
+            savedOperand = button.innerHTML
+            operandOne = lastResult
+            isLastKeyOp = true
+        }
+        else {
+            operandOne = displayValue
+            savedOperand = button.innerHTML
+            isLastKeyOp = true
+        }
     }
     isLastKeyEq = false;
 } ) )
@@ -84,6 +91,7 @@ clear.forEach(button => button.addEventListener('click', function() {
     savedOperand = "";
     operandOne = "";
     isLastKeyOp = false;
+    isLastKeyEq = false;
     displayBox.innerHTML = displayValue} ) )  
 
 const calculate = function () {
@@ -94,7 +102,12 @@ const calculate = function () {
 
 const equal = document.querySelectorAll(".equal")
 equal.forEach(button => button.addEventListener('click', function() {
-    if (isLastKeyEq == false) {
-        calculate()
+    if (savedOperand != "") {
+        if (isLastKeyEq == false) {
+            calculate()
+            isLastKeyEq = true
+            isLastKeyOp = false
+        }
     }
+    isLastKeyOp = false
 } ) )
